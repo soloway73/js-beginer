@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+main {
+  background-color: #f3f6fd;
+  display: flex;
+  width: 100%;
+}
+button.mainBarBtn,
+.addBtn {
+  display: flex;
+  width: 45px;
+  height: 45px;
+  border-radius: 20%;
+  margin-right: auto;
+  margin-left: auto;
+  box-shadow: 0px 8px 14px rgba(62, 107, 224, 0.12);
+  border-radius: 14px;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+#mainLogo {
+  margin-right: auto;
+  margin-left: auto;
+}
+button img {
+  margin: auto;
+}
+.mainBarBtn:hover {
+  background-color: #6a6afb;
+}
+.mainBarBtn:hover img {
+  filter: brightness(0) invert(1);
+}
+.buttonsBar {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 120px;
+  padding: 30px;
+  background-color: #fbfaff;
+}
+
+.activeBtn {
+  background-color: #5051f9 !important;
+  img {
+    filter: brightness(0) invert(1);
+  }
+}
+
+.addBtn:hover {
+  background-color: #eff2ff;
+}
