@@ -3,32 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
-    <div class="buttonsBar">
-      <a href="#" id="mainLogo"
-        ><img src="images/logo.svg" alt="Логотип Hobbit" />
-      </a>
-      <button class="mainBarBtn activeBtn">
-        <img src="images/sport.svg" alt="Спорт" />
-      </button>
-      <button class="mainBarBtn">
-        <img src="images/water.svg" alt="Вода" />
-      </button>
-      <button class="mainBarBtn">
-        <img src="images/food.svg" alt="Еда" />
-      </button>
-      <button class="addBtn">
-        <img src="images/add.svg" alt="Добавить" />
-      </button>
-    </div>
-    <main>
-      <div class="sport">
-        <header><h1>Отжимания</h1></header>
+    <div class="app">
+      <div class="buttonsBar">
+        <a href="#" id="mainLogo"
+          ><img src="images/logo.svg" alt="Логотип Hobbit" />
+        </a>
+        <button class="mainBarBtn activeBtn">
+          <img src="images/sport.svg" alt="Спорт" />
+        </button>
+        <button class="mainBarBtn">
+          <img src="images/water.svg" alt="Вода" />
+        </button>
+        <button class="mainBarBtn">
+          <img src="images/food.svg" alt="Еда" />
+        </button>
+        <button class="addBtn">
+          <img src="images/add.svg" alt="Добавить" />
+        </button>
       </div>
-    </main>
-    <script src="app.js"></script>
+      <div class="content">
+        <header>
+          <h1>Отжимания</h1>
+          <div class="progress">
+            <div class="progressTopLine">
+              <div class="progressText">Прогресс</div>
+              <div class="progressPercent">80%</div>
+            </div>
+            <div class="progressLine">
+              <div class="progressFill"></div>
+            </div>
+          </div>
+        </header>
+        <main>
+          <div class="posts">
+            <div class="post">
+              <div class="leftOfPost">День 1</div>
+              <div class="rightOfPost">
+                <p class="text">Первый подход всегда даётся тяжело</p>
+                <button type="button" class="removeBtn">
+                  <img src="images/delete.svg" alt="Кнопка удалить" />
+                </button>
+              </div>
+            </div>
+            <div class="post">
+              <div class="leftOfPost">День 2</div>
+              <div class="rightOfPost">
+                <img
+                  src="images/comment.svg"
+                  alt="Комментарий"
+                  class="commentImg"
+                />
+                <input
+                  type="text"
+                  placeholder="Комментарий"
+                  class="addMessage"
+                />
+                <button type="button" class="commentBtn">Готово</button>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <script src="app.js"></script>
+    </div>
   </body>
 </html>

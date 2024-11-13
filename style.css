@@ -1,11 +1,41 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
+.app {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  font-family: "Comfortaa";
+  font-style: normal;
+  width: 100vh;
+  max-width: 1920px;
+  flex-grow: 1;
+}
+h1 {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 33px;
+  color: #000000;
+}
+
 main {
-  background-color: #f3f6fd;
   display: flex;
   width: 100%;
 }
@@ -41,9 +71,9 @@ button img {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  max-width: 120px;
   padding: 30px;
-  background-color: #fbfaff;
+  max-width: 120px;
+  background-color: #fff;
 }
 
 .activeBtn {
@@ -55,4 +85,135 @@ button img {
 
 .addBtn:hover {
   background-color: #eff2ff;
+}
+
+.content {
+  padding: 49px 46px;
+  width: 100%;
+  background-color: #fbfaff;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.progressTopLine {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: "Comfortaa";
+  font-style: normal;
+}
+.progressPercent {
+  font-size: 12px;
+  line-height: 13px;
+  color: #768396;
+}
+.progressText {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #232360;
+}
+.progressLine {
+  width: 235px;
+  height: 5px;
+  background-color: #e6e9ed;
+  position: relative;
+  border-radius: 4px;
+}
+.progressFill {
+  width: 80%;
+  height: 5px;
+  left: 0;
+  position: absolute;
+
+  background: #5051f9;
+  border-radius: 4px;
+}
+.posts {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 19px;
+}
+.post {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 0px 8px 14px rgba(62, 107, 224, 0.12);
+  border-radius: 14px;
+}
+.leftOfPost {
+  font-weight: 400;
+  font-size: 14px;
+  width: 129px;
+  height: 100%;
+  background-color: #fbfaff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 14px 0px 0px 14px;
+  border-right: solid 1px #e7ebfb;
+}
+.rightOfPost {
+  position: relative;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  gap: 14px;
+}
+.text {
+  padding: 19px 24px 17px 24px;
+}
+.removeBtn {
+  position: absolute;
+  padding: 5px;
+  right: 15px;
+  top: 9px;
+  cursor: pointer;
+  background-color: #fff;
+}
+.commentImg {
+  position: absolute;
+  left: 28px;
+  top: 18px;
+}
+.addMessage {
+  width: 100%;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #e7ebfb;
+  border-radius: 9px;
+  height: 39px;
+  padding-left: 48px;
+  margin: 7px 0 5px 10px;
+}
+
+.commentBtn {
+  width: 120px;
+  height: 39px;
+  background: #edecfe;
+  border-radius: 9px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 14px;
+  margin-right: 5px;
+  color: #5051f9;
+  cursor: pointer;
+  &:hover {
+    background-color: #5051f9;
+    color: #fff;
+  }
 }
