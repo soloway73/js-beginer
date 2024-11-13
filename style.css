@@ -75,7 +75,11 @@ button img {
   max-width: 120px;
   background-color: #fff;
 }
-
+.menuList {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
 .activeBtn {
   background-color: #5051f9 !important;
   img {
