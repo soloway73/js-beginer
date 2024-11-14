@@ -203,7 +203,9 @@ header {
   padding-left: 48px;
   margin: 7px 0 5px 10px;
 }
-
+input.error {
+  border: 1px solid red;
+}
 .commentBtn {
   width: 120px;
   height: 39px;
