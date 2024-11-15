@@ -29,7 +29,7 @@
             <img src="images/food.svg" alt="Еда" />
           </button> -->
         </div>
-        <button class="addBtn">
+        <button class="addBtn" type="button" onclick="togglePopup()">
           <img src="images/add.svg" alt="Добавить" />
         </button>
       </div>
@@ -68,7 +68,7 @@
                 <input
                   type="text"
                   placeholder="Комментарий"
-                  class="addMessage"
+                  class="addMessage input"
                 />
                 <button type="button" class="commentBtn">Готово</button>
               </div> -->
@@ -76,7 +76,30 @@
           </div>
         </main>
       </div>
+      <div class="cover coverHidden" id="addPopup">
+        <div class="popup">
+          <h2>Новая привычка</h2>
+          <div class="iconLabel">Иконка</div>
+          <div class="iconSelect">
+            <button class="icon iconActive" onclick="setIcon(this, 'sport')">
+              <img src="images/sport.svg" alt="Спорт">
+            </button>
+            <button class="icon" onclick="setIcon(this, 'water')">
+              <img src="images/water.svg" alt="Вода" >
+            </button>
+            <button class="icon" onclick="setIcon(this, 'food')">
+              <img src="images/food.svg" alt="Еда" >
+            </button>
+          </div>
+          <form class="popupForm" onsubmit="addHabbit(event)">
+            <input type="text" name="name" placeholder="Название">
+            <input type="number" name="target" placeholder="Цель">
+            <input type="text" name="icon" placeholder="Иконка" value="sport" hidden>
+            <button type="submit" class="button">Добавить</button>
+          </form>
+          <button class="popupClose" type="button" onclick="togglePopup()"><img src="images/close.svg" alt="Закрыть попап"></button>
+        </div>
+      </div>
       <script src="app.js"></script>
-    </div>
   </body>
 </html>

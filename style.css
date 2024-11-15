@@ -29,9 +29,13 @@ body {
   flex-grow: 1;
 }
 h1 {
+  font-family: "Comfortaa";
+  font-style: normal;
   font-weight: 400;
-  font-size: 30px;
-  line-height: 33px;
+  font-size: 24px;
+  line-height: 27px;
+  text-align: center;
+
   color: #000000;
 }
 
@@ -193,7 +197,8 @@ header {
   left: 28px;
   top: 18px;
 }
-.addMessage {
+.addMessage,
+input {
   width: 100%;
   box-sizing: border-box;
   background: #ffffff;
@@ -206,7 +211,8 @@ header {
 input.error {
   border: 1px solid red;
 }
-.commentBtn {
+.commentBtn,
+.button {
   width: 120px;
   height: 39px;
   background: #edecfe;
@@ -221,4 +227,92 @@ input.error {
     background-color: #5051f9;
     color: #fff;
   }
+}
+.cover {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coverHidden {
+  display: none;
+}
+
+.popup {
+  background: #ffffff;
+  box-shadow: 0px 8px 14px rgba(62, 107, 224, 0.12);
+  border-radius: 10px;
+  max-width: 600px;
+  padding: 20px;
+  position: relative;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.popupClose {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+h2 {
+  font-family: "Comfortaa";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 27px;
+  text-align: center;
+
+  color: #000000;
+}
+.iconLabel {
+  font-size: 14px;
+  line-height: 16px;
+  color: #768396;
+  margin: 15px;
+}
+.iconSelect {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+.icon {
+  border: 1px solid #5051f9;
+  border-radius: 14px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+}
+
+.iconActive {
+  background: #5051f9;
+}
+.icon:hover img {
+  filter: brightness(0) invert(1);
+}
+.iconActive img {
+  filter: brightness(0) invert(1);
+}
+.icon:hover {
+  background: #6a6afb;
+}
+.popupForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
