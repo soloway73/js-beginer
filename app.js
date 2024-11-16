@@ -210,9 +210,35 @@ function addHabbit(event) {
   togglePopup();
   rerender(maxId + 1);
 }
+async function loadJsonAndStore() {
+  try {
+    // Загружаем данные из файла JSON
+    const response = await fetch("data/demo.json");
+
+    // Проверяем, успешен ли запрос
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+
+    // Преобразуем ответ в JSON
+    const data = await response.json();
+
+    // Сохраняем данные в localStorage с ключом HABBIT_KEY
+    localStorage.setItem("HABBIT_KEY", JSON.stringify(data));
+
+    console.log("Данные успешно сохранены в localStorage:", data);
+  } catch (error) {
+    console.error("Ошибка при загрузке или сохранении данных:", error);
+  }
+}
+
+// Вызов функции
 
 // init
 (() => {
+  if (!localStorage.getItem(HABBIT_KEY)) {
+    loadJsonAndStore();
+  }
   loadData();
   const hashId = Number(document.location.hash.replace("#", ""));
   const urlHabbit = habbits.find((habbit) => habbit.id == hashId);
